@@ -1,3 +1,3 @@
-# grocery inventory
+# Grocery Inventory
 
 Practice Django Website
