@@ -1,7 +1,7 @@
 from django.db import models
 
 class Product(models.Model):
-     PRODUCT_TYPE_CHOICES = [
+    PRODUCT_TYPE_CHOICES = [
         ('DRY_PRODUCE', 'DRY_PRODUCE'),
         ('WET_PRODUCE', 'WET_PRODUCE'),
         ('CANNED_FOOD', 'CANNED_FOOD'),
@@ -16,7 +16,6 @@ class Product(models.Model):
         ('MEAT', 'MEAT'),
         ('NUT','NUT'),
     ]
-    
     name = models.CharField(max_length=100)
     product_type = models.CharField(
         max_length=15,
