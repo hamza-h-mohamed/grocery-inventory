@@ -1,0 +1,38 @@
+{% extends "product/base.html" %}
+{% block content %}
+    <main role="main">
+       <div class="container-fluid w-75 mt-5">
+           <div class="card-deck mb-3 text-center">
+               {% for product in object_list %}
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header">
+                            <h2 class="text-center">
+                                {{product.name}}
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <img src="{{product.product_image.url}}" alt="banana" height="244" width="244">
+                            <ul>
+                                <li class="float-left" style="list-style: none;">
+                                    <h3 > 
+                                        Price: ${{product.price}}
+                                    </h3>
+                                </li>
+                                <li class=" pr-4 w-75" style="list-style: none;">
+                                    <div class="input-group ">
+                                        <h4>
+                                            QTY:    
+                                        </h4>
+                                        <input class="form-control" type="number" name="quantity" min="1" max="{{product.quantity}}" aria-describedby="basic-addon1">
+                                        <input type="submit" value="Add to Cart">
+                                    </div>
+                                </li>
+                            </ul>
+                        
+                        </div>
+                    </div>
+                {%endfor%}
+           </div>
+       </div> 
+    </main>
+{% endblock content %}
